@@ -4,9 +4,9 @@ import React, { useEffect, useState } from 'react';
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const musicianapi = [
-    { img: "/Assets/herosection/hero1.jpg" },
-    { img: "/Assets/herosection/hero2.jpg" },
-    { img: "/Assets/herosection/hero3.jpg" }
+    { img: "/Assets/herosection/product.jpg" },
+    { img: "/Assets/herosection/product2.webp" },
+    { img: "/Assets/herosection/product3.jpg" }
    
   ];
 
