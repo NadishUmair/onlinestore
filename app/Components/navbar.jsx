@@ -19,7 +19,7 @@ const Navbar = () => {
      <div className=' w-full flex justify-between items-center h-auto   px-2 md:px-4'>
        
        <div className='text-white p-2 flex w-[60%]  md:w-[40%] '>
-         <img src="/Assets/shopcircle1.png" className=' w-[100px] md:w-[200px] h-[60px] md:h-[120px] object-cover' alt="Logo" />
+         <img src="/Assets/shopcircle.PNG" className=' w-[100px] md:w-[200px] h-[60px] md:h-[120px] object-cover' alt="Logo" />
        {/* <div className='bg-white border p-2'>
        <img src="/Assets/candaflag.png" className='w-[100px] md:w-[120px] h-[60px] object-cover' alt="canadaflag" />
        </div> */}
