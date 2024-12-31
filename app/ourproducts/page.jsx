@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
 import { MdOutlineBedroomChild } from 'react-icons/md';
-import Products from '../api/yachtsData';
+import yachts from '../api/yachtsData';
 const OurProducts = () => {
   
   
@@ -23,24 +23,24 @@ const OurProducts = () => {
     <div className="py-16 px-4 bg-gray-100" id='ouryachts'>
        
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {yachts.map((yacht, index) => (
+        {yachts?.map((yacht, index) => (
           <a
-          href={`/yachtsDetail/${yacht.slug}`}
+          href={`/yachtsDetail/${yacht?.slug}`}
           key={index}  className="bg-white rounded-xl  overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl">
            
-            <img src={yacht.img} alt={yacht.name} className="w-full h-64 object-cover rounded-t-xl" />
+            <img src={yacht.img} alt={yacht?.name} className="w-full h-64 object-cover rounded-t-xl" />
             <div className="p-6">
-              <h2 className="text-3xl font-bold text-gray-900 mb-3">{yacht.name}</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-3">{yacht?.name}</h2>
               <div className="text-gray-600 text-sm mb-4 flex flex-wrap gap-4">
-                <p><strong>Length:</strong> {yacht.length || "N/A"}</p>
+                <p><strong>Length:</strong> {yacht?.length || "N/A"}</p>
                 <p className="flex items-center gap-1"><MdOutlineBedroomChild /> <strong>Bedrooms:</strong> {yacht.bedRooms}</p>
-                <p><strong>Bathrooms:</strong> {yacht.washRooms}</p>
-                {yacht.kitchen && <p><strong>Kitchen:</strong> {yacht.kitchen}</p>}
-                {yacht.persons && <p><strong>Capacity:</strong> {yacht.persons} persons</p>}
+                <p><strong>Bathrooms:</strong> {yacht?.washRooms}</p>
+                {yacht.kitchen && <p><strong>Kitchen:</strong> {yacht?.kitchen}</p>}
+                {yacht.persons && <p><strong>Capacity:</strong> {yacht?.persons} persons</p>}
                 {/* {yacht.desc && <p>{yacht?.desc}</p>} */}
               </div>
               <div className="flex justify-between items-center mt-4">
-                <p className="text-xl font-semibold text-gray-800">{yacht.perhour || "Price: N/A"}</p>
+                <p className="text-xl font-semibold text-gray-800">{yacht?.perhour || "Price: N/A"}</p>
                 <button 
                    
                   target="_blank" 
