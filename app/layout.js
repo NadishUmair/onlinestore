@@ -1,0 +1,82 @@
+// "use client";
+
+// import { useEffect, useState } from "react";
+import { Inter } from "next/font/google";
+
+import "./globals.css";
+import { FaArrowUp, FaWhatsapp } from "react-icons/fa";
+import Loading from "./loading";
+import Navbar from "./Components/navbar";
+import Footer from "./Components/footer";
+import Script from "next/script";
+import Head from "next/head";
+import CustomHead from "./Components/customHead";
+
+const inter = Inter({ subsets: ["latin"] });
+
+
+
+export const metadata = {
+  title: "Smart Choice Yachts",
+  description:
+    "",
+  keywords: "",
+  verification: {
+    google: "nJT7rzCm5FSnpLJtTdewiJcRrLEcPkrr73K1ZF5VHxo",
+  },
+};
+
+
+
+
+export default function RootLayout({ children }) {
+  
+
+
+  const whatsappNumber = "+971589552731";
+  const message = "Hello! I need assistance.";
+
+  return (
+    <html lang="en" title={metadata.title} description={metadata.description}>
+      <CustomHead/>
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700;900&family=Work+Sans:wght@100;400;700;900&display=swap"
+          rel="stylesheet"
+        />
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: 'none' }}
+            src="https://www.facebook.com/tr?id=8508189072608302&ev=PageView&noscript=1"
+          />
+        </noscript>
+      </Head>
+
+    
+
+      <body className={`relative ${inter.className} `}>
+       
+          <section  >
+            <Navbar />
+            {children}
+            <Footer />
+            <a
+              href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`}
+              className="fixed z-50 top-[70%] right-4 bg-green-500 p-2 rounded-full cursor-pointer"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaWhatsapp className="text-[2rem] text-white" />
+            </a>
+            {/* {showScrollToTop && ( */}
+             
+            
+          </section>
+        
+      </body>
+    </html>
+  );
+}
