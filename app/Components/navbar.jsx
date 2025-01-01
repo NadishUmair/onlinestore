@@ -14,7 +14,7 @@ const Navbar = () => {
   };
 
   return (
-   <section className='fixed  bg-opacity-95 top-0 z-20 w-full  items-center bg-transparent  '>
+   <section className='fixed bg-white  bg-opacity-95 top-0 z-20 w-full  items-center bg-transparent  '>
  
      <div className=' w-full flex justify-between items-center h-auto   px-2 md:px-4'>
        
