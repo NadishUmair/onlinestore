@@ -7,7 +7,7 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTiktok } from "react-icons/fa
 const Footer = () => {
   return (
     <footer className="bg-[#264846] text-white py-16">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6 ">
         {/* Main Footer Content */}
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 mb-16">
           {/* Quick Links Section */}
@@ -44,7 +44,7 @@ const Footer = () => {
 
           {/* Customer Service Section */}
           <div>
-            <h2 className="text-2xl font-semibold text-gray-300 mb-6">Customer Service</h2>
+            <h2 className="text-xl font-semibold text-gray-300 mb-6">Customer Service</h2>
             <ul className="space-y-6">
               <li>
                 <Link href="/faq" className="flex items-center text-lg text-gray-200 hover:text-gray-400 transition duration-300">
@@ -66,7 +66,7 @@ const Footer = () => {
 
           {/* Follow Us Section */}
           <div>
-            <h2 className="text-2xl font-semibold text-gray-300 mb-6">Follow Us</h2>
+            <h2 className="text-xl font-semibold text-gray-300 mb-6">Follow Us</h2>
             <div className="flex gap-6">
               <a href="https://www.facebook.com/smartchoiceyachts" className="text-3xl text-gray-200 hover:text-blue-500 transition duration-300" aria-label="Facebook">
                 <FaFacebookF />
@@ -85,15 +85,15 @@ const Footer = () => {
 
           {/* Contact Information Section */}
           <div>
-            <h2 className="text-2xl font-semibold text-gray-300 mb-6">Contact Information</h2>
-            <p className="mb-6 text-lg text-gray-200">
-              <strong>Email:</strong>
+            <h2 className="text-xl font-semibold text-gray-300 mb-6">Contact Information</h2>
+            <p className="mb-6 text-sm text-gray-200">
+              <strong className="text-lg">Email:</strong>
               <a href="mailto:Info@smartchoiceyachts.com" className="text-gray-400 hover:text-gray-500 transition duration-300 ml-2">
                 Info@smartchoiceyachts.com
               </a>
             </p>
-            <p className="mb-6 text-lg text-gray-200">
-              <strong>Phone:</strong>
+            <p className="mb-6 text-sm text-gray-200 flex flex-wrap">
+              <strong className="text-lg">Phone:</strong>
               <a href="tel:+971522757000" className="text-gray-200 hover:text-gray-400 transition duration-300">+971522757000</a>, 
               <a href="tel:+971589552731" className="text-gray-200 hover:text-gray-400 transition duration-300 ml-2">+971589552731</a>
             </p>
@@ -102,7 +102,7 @@ const Footer = () => {
 
         {/* Store Promotions / CTA Section */}
         <div className="text-center py-12 bg-[#203f45] rounded-lg mb-12">
-          <h2 className="text-2xl font-semibold mb-4 text-white">Limited Time Offer!</h2>
+          <h2 className="text-sm font-semibold mb-4 text-white">Limited Time Offer!</h2>
           <p className="mb-6 text-lg text-white">Get 20% off your first purchase with code: <strong className="text-gray-300">SMART20</strong></p>
           <Link href="/shop" className="bg-gray-500 text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-gray-600 transition duration-300">
             Shop Now
