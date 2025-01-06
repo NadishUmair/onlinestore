@@ -21,9 +21,9 @@ const Products = () => {
          
           rel="noopener noreferrer"
             key={index}
-            className="bg-white hover:cursor-pointer h-[520px] overflow-hidden transform transition duration-300 "
+            className="bg-white hover:cursor-pointer h-[540px] overflow-hidden transform transition duration-300 "
           >
-          <div className="h-[80%] overflow-hidden relative">
+          <div className="h-[70%] overflow-hidden relative">
           <img
               src={yacht.img}
               alt={yacht.name}
@@ -33,7 +33,7 @@ const Products = () => {
               save {yacht.discount} %
             </span>
           </div>
-            <div className="py-4 px-1 mt-2">
+            <div className="py-4 px-1 mt-2 h-[30%]">
               <div className="flex justify-between items-center">
                 <span>
                   <h2 className="text-md font-light  text-gray-900 ">

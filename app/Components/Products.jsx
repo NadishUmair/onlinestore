@@ -12,13 +12,13 @@ const Products = () => {
               key={index} 
               className='bg-white transform transition-transform duration-300 hover:scale-125 hover:-translate-y-4 shadow-lg hover:shadow-4xl hover:z-10 rounded-lg overflow-hidden'
             >
-              <div className='h-[300px] relative'>
+              <div className='h-[30px] relative border border-red-800'>
                 <Image
                   src={item?.img} 
                   layout="fill"
                   loading='lazy'
                   style={{ objectFit: 'cover' }}
-                  className='transition-all duration-300 h-[80%] ease-in-out' 
+                  className='transition-all duration-300 ease-in-out' 
                   alt={item.title} 
                 />
               </div>
