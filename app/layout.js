@@ -17,7 +17,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 
 export const metadata = {
-  title: "Smart Choice Yachts",
+  title: "Shop Circle",
   description:
     "",
   keywords: "",

@@ -60,7 +60,7 @@ export default function Page({ params }) {
   console.log("product", product);
 
   return (
-    <section className="flex  h-[100vh] py-[50px]  flex-col justify-end items-center">
+    <section className="flex  h-auto py-[50px]  flex-col justify-end items-center">
       {/* <div className="relative w-full h-[90vh]">
         <img src="/Assets/overall-hero.jpg" className="h-full w-full object-cover" alt="" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#00a1b3] via-transparent to-transparent"></div>
