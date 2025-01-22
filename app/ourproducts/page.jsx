@@ -1,9 +1,24 @@
 "use client"
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { MdOutlineBedroomChild } from 'react-icons/md';
 import yachts from '../api/yachtsData';
+import axios from 'axios';
 const OurProducts = () => {
+  const [products,setProducts]=useState([]);
+  const AllProducts=async()=>{
+    console.log("hy");
+    try {
+          const response= await axios.get("https://store-backend-umber.vercel.app/api/product/all-products");
+          console.log("resposne",response);
+          setProducts(response?.data.products)
   
+    } catch (error) {
+      console.log("eror",error);
+    }
+  }
+  useEffect(()=>{
+   AllProducts();
+  },[])
   
   return (
     <section>
