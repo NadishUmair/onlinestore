@@ -1,9 +1,10 @@
 
 import HeroSection from '../Components/HeroSection'
 import Pricing from '../Components/Pricing'
-import Products from '../Components/Products'
+
 
 import React from 'react'
+import Products from '../products/page'
 
 
 
