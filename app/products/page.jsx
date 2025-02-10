@@ -25,7 +25,6 @@ const Products = () => {
         stock
       }`;
   
-      // Fetch products using the sanity client
       const fetchedProducts = await client.fetch(query);
       setProducts(fetchedProducts);
     } catch (error) {
