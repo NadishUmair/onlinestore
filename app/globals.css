@@ -55,6 +55,7 @@
     border-width: 2px;
     border-color: transparent;
     transform: scale(1);
+    background:#87451e;
   }
   25% {
     border-width: 2px;

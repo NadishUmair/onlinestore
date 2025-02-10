@@ -31,7 +31,7 @@ const Navbar = () => {
            </li>
         
            <li className='cursor-pointer transition-all ease-in-out duration-300'>
-             <Link href="/ouryachts">Our Products</Link>
+             <Link href="/products">Our Products</Link>
            </li>
          
            <li className='cursor-pointer transition-all ease-in-out duration-300'>
