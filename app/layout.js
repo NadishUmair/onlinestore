@@ -40,26 +40,16 @@ export default function RootLayout({ children }) {
     <html lang="en" title={metadata.title} description={metadata.description}>
       <CustomHead/>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700;900&family=Work+Sans:wght@100;400;700;900&display=swap"
-          rel="stylesheet"
-        />
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: 'none' }}
-            src="https://www.facebook.com/tr?id=8508189072608302&ev=PageView&noscript=1"
-          />
-        </noscript>
+        <link rel="icon" href="/Assets/shopcircle.png" />
+     
+     
       </Head>
 
     
 
       <body className={`relative ${inter.className} `}>
        
-          <section  >
+          <section className="overflow-hidden" >
             <Navbar />
             {children}
             <Footer />

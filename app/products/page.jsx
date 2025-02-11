@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { client } from '../../sanity/lib/client';
-
 import Loading from "../loading";
 
 const Products = () => {
@@ -12,7 +11,6 @@ const Products = () => {
 
   const fetchProducts = async () => {
     try {
-     
       const query = `*[_type == "product"]{
         _id,
         name,
@@ -26,6 +24,7 @@ const Products = () => {
       }`;
   
       const fetchedProducts = await client.fetch(query);
+      console.log("fecthed",fetchedProducts);
       setProducts(fetchedProducts);
     } catch (error) {
       console.error("Error fetching products:", error);
@@ -33,7 +32,6 @@ const Products = () => {
       setIsLoading(false); 
     }
   };
-  
 
   useEffect(() => {
     fetchProducts();
@@ -52,20 +50,20 @@ const Products = () => {
               Our Products
             </span>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-4 ">
             {products?.map((product) => (
               <Link
-                href={`/products/${product._id}`} 
+                href={`/products/${product._id}`} // Using the product's unique _id for routing
                 key={product._id}
-                className="bg-white hover:cursor-pointer h-[450px] overflow-hidden transform transition duration-300"
+                className="bg-white  min-h-[500px]  hover:cursor-pointer  overflow-hidden transform transition duration-300"
               >
-                <div className="h-[50%] overflow-hidden relative">
+                <div className="h-[80%] overflow-hidden relative">
                   <Image
                     src={product?.productImg}
                     alt={product.name}
                     width={500}
                     height={500}
-                    className="w-full h-full object-contain hover:scale-105 transition-all ease-in-out duration-300"
+                    className="w-full h-full object-cover hover:scale-105 transition-all ease-in-out duration-300"
                     loading="lazy"
                   />
                   <span className="absolute bg-black/90 tracking-wide text-center text-[10px] text-white py-1 z-10 top-0 w-[30%]">
@@ -75,9 +73,7 @@ const Products = () => {
                 <div className="py-4 px-1 mt-2 h-[30%]">
                   <div className="flex justify-between items-center">
                     <span>
-                      <h2 className="text-[12px] font-light text-gray-900 ">
-                        {product?.name}
-                      </h2>
+                      <h2 className="text-[12px] font-light text-gray-900 ">{product?.name}</h2>
                     </span>
                     <div className="flex items-center">
                       <span>

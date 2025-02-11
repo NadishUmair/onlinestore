@@ -14,9 +14,9 @@ const Navbar = () => {
   };
 
   return (
-   <section className=' bg-white  bg-opacity-95 top-0 z-20 w-full  items-center bg-transparent  '>
+   <section className='relative bg-white   bg-opacity-95 top-0 z-20 w-full  items-center bg-transparent '>
  
-     <div className=' w-full flex justify-between items-center h-auto   px-2 md:px-4'>
+     <div className=' w-full flex justify-between  items-center h-auto   px-2 md:px-4'>
        
        <div className='text-white  flex w-[60%]  md:w-[20%] '>
          <img src="/Assets/shopcircle.PNG" className=' w-[100px] md:w-[200px] h-[60px] md:h-[120px] object-cover' alt="Logo" />
@@ -51,7 +51,7 @@ const Navbar = () => {
            <IoMdMenu className=' text-[2.5rem] cursor-pointer' />
          )}
        </div>
-       <div className={`w-full left-0 p-2 bg-white ${showMenu ? "translate-x-0" : "translate-x-full"} transition-transform duration-500 ease-in-out md:hidden absolute border top-[100%]`}>
+       <div className={`w-full top-0 left-0 p-2 bg-white ${showMenu ? "translate-x-0" : "translate-x-full"} transition-transform duration-500 ease-in-out md:hidden absolute border top-[100%]`}>
          <ul className='flex flex-col gap-4 font-semibold w-full '>
            <li className='cursor-pointer transition-all ease-in-out duration-300'>
              <Link href="/" onClick={() => setShowMenu(false)}>Home</Link>
