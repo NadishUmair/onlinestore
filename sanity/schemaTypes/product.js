@@ -30,6 +30,12 @@ export default {
         validation: Rule => Rule.min(0),
       },
       {
+        name: 'prevprice',
+        title: 'PrevPrice',
+        type: 'number',
+        validation: Rule => Rule.min(0),
+      },
+      {
         name: 'image',
         title: 'Product Image',
         type: 'image',
