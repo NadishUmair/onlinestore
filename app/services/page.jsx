@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 
 
 const Services = () => {
-  const [hoveredIndex, setHoveredIndex] = useState(null); // Track index of the hovered card
+  const [hoveredIndex, setHoveredIndex] = useState(null);
   const ServicesApi = [
     {title: "SUPER YACHT EXPERIENCE", img: "/Assets/services/service1.jpg"},
     {title: "YACHT RENTAL DUBAI", img: "/Assets/services/service2.jpg"},
