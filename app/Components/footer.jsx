@@ -68,18 +68,18 @@ const Footer = () => {
           <div>
             <h2 className="text-xl font-semibold text-gray-300 mb-6">Follow Us</h2>
             <div className="flex gap-6">
-              <a href="https://www.facebook.com/smartchoiceyachts" className="text-3xl text-gray-200 hover:text-blue-500 transition duration-300" aria-label="Facebook">
+              <a href="https://www.facebook.com/shopcirclestore" className="text-3xl text-gray-200 hover:text-blue-500 transition duration-300" aria-label="Facebook">
                 <FaFacebookF />
               </a>
-              <a href="https://www.instagram.com/smartchoiceyachtsdubai" className="text-3xl text-gray-200 hover:text-pink-500 transition duration-300" aria-label="Instagram">
+              <a href="https://www.instagram.com/shopcirclestore/" className="text-3xl text-gray-200 hover:text-pink-500 transition duration-300" aria-label="Instagram">
                 <FaInstagram />
               </a>
-              <a href="https://www.linkedin.com/company/smartchoiceyachts" className="text-3xl text-gray-200 hover:text-blue-600 transition duration-300" aria-label="LinkedIn">
+              {/* <a href="https://www.linkedin.com/company/smartchoiceyachts" className="text-3xl text-gray-200 hover:text-blue-600 transition duration-300" aria-label="LinkedIn">
                 <FaLinkedinIn />
               </a>
               <a href="https://www.tiktok.com/@smartchoiceyachts" className="text-3xl text-gray-200 hover:text-black transition duration-300" aria-label="TikTok">
                 <FaTiktok />
-              </a>
+              </a> */}
             </div>
           </div>
 
@@ -87,15 +87,14 @@ const Footer = () => {
           <div>
             <h2 className="text-xl font-semibold text-gray-300 mb-6">Contact Information</h2>
             <p className="mb-6 text-sm text-gray-200">
-              <strong className="text-lg">Email:</strong>
-              <a href="mailto:Info@smartchoiceyachts.com" className="text-gray-400 hover:text-gray-500 transition duration-300 ml-2">
+              {/* <strong className="text-lg">Email:</strong> */}
+              {/* <a href="mailto:Info@smartchoiceyachts.com" className="text-gray-400 hover:text-gray-500 transition duration-300 ml-2">
                 Info@smartchoiceyachts.com
-              </a>
+              </a> */}
             </p>
             <p className="mb-6 text-sm text-gray-200 flex flex-wrap">
               <strong className="text-lg">Phone:</strong>
-              <a href="tel:+971522757000" className="text-gray-200 hover:text-gray-400 transition duration-300">+971522757000</a>, 
-              <a href="tel:+971589552731" className="text-gray-200 hover:text-gray-400 transition duration-300 ml-2">+971589552731</a>
+              <a href="tel:+923214644406" className="text-gray-200 hover:text-gray-400 transition duration-300">+923214644406</a>
             </p>
           </div>
         </div>
@@ -119,7 +118,7 @@ const Footer = () => {
         {/* Footer Bottom Section */}
         <div className="text-center text-sm mt-16 pt-6 border-t border-gray-600 text-gray-200">
           <p>
-            &copy; {new Date().getFullYear()} Smart Choice Yachts. All rights reserved.
+            &copy; {new Date().getFullYear()} Shop Circle. All rights reserved.
           </p>
         </div>
       </div>
