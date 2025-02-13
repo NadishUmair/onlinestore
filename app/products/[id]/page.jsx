@@ -58,20 +58,20 @@ const ProductDetail = () => {
           </div>
           <div className="flex flex-col justify-center  p-4 md:w-[50%]">
           <h1 className="text-4xl font-bold">{product.name}</h1>
-            <p className="text-lg mb-4">{product.description}</p>
+            <p className="text-md mb-4">{product.description}</p>
             <div className="text-xl font-semibold">
               Rs {product.price || "Price: N/A"}
             </div>
-            <div className="text-sm text-gray-500">
-              Previous Price: Rs {product.prevPrice}
-            </div>
             <div className="mt-4 w-full border">
-              <button
-                href={`https://wa.me/+971589552731`}
-                className="text-white bg-green-600 px-4 py-2 w-full rounded-full"
-              >
-                Order Now
-              </button>
+            <a
+  href="https://wa.me/+923214644406"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-white bg-green-600 px-4 py-2 w-full rounded-full text-center inline-block"
+>
+  Order Now
+</a>
+
             </div>
           </div>
         </div>

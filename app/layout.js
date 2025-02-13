@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
   
 
 
-  const whatsappNumber = "+971589552731";
+  const whatsappNumber = "+923214644406";
   const message = "Hello! I need assistance.";
 
   return (

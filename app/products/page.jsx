@@ -24,7 +24,7 @@ const Products = () => {
       }`;
   
       const fetchedProducts = await client.fetch(query);
-      console.log("fecthed",fetchedProducts);
+      console.log("fetched",fetchedProducts);
       setProducts(fetchedProducts);
     } catch (error) {
       console.error("Error fetching products:", error);
@@ -53,22 +53,20 @@ const Products = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-4 ">
             {products?.map((product) => (
               <Link
-                href={`/products/${product._id}`} // Using the product's unique _id for routing
-                key={product._id}
-                className="bg-white  min-h-[500px]  hover:cursor-pointer  overflow-hidden transform transition duration-300"
+                href={`/products/${product?._id}`}
+                key={product?._id}
+                className="bg-white max-h-[550px] hover:cursor-pointer overflow-hidden transform transition duration-300"
               >
-                <div className="h-[80%] overflow-hidden relative">
+                <div className="h-[80%] relative">
                   <Image
                     src={product?.productImg}
-                    alt={product.name}
+                    alt={product?.name}
                     width={500}
                     height={500}
-                    className="w-full h-full object-cover hover:scale-105 transition-all ease-in-out duration-300"
+                    objectFit="contain" // Prevents cropping while maintaining aspect ratio
+                    className="w-full h-full hover:scale-105 transition-all ease-in-out duration-300"
                     loading="lazy"
                   />
-                  <span className="absolute bg-black/90 tracking-wide text-center text-[10px] text-white py-1 z-10 top-0 w-[30%]">
-                    save%
-                  </span>
                 </div>
                 <div className="py-4 px-1 mt-2 h-[30%]">
                   <div className="flex justify-between items-center">
@@ -78,9 +76,9 @@ const Products = () => {
                     <div className="flex items-center">
                       <span>
                         <div className="text-[12px] font-light text-gray-800">
-                          <span className="text-red-600 line-through mr-2">
+                          {/* <span className="text-red-600 line-through mr-2">
                             Rs {product?.prevPrice}.00{" "}
-                          </span>
+                          </span> */}
                           <span>Rs {product?.price || "Price: N/A"}.00</span>
                         </div>
                       </span>
