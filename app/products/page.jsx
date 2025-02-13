@@ -57,7 +57,7 @@ const Products = () => {
                 key={product?._id}
                 className="bg-white max-h-[550px] hover:cursor-pointer overflow-hidden transform transition duration-300"
               >
-                <div className="h-[80%] relative">
+                <div className="h-[70%] relative">
                   <Image
                     src={product?.productImg}
                     alt={product?.name}

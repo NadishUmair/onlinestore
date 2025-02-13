@@ -10,13 +10,13 @@ import Products from '../products/page'
 
 const Landing = () => {
   return (
-    <>
-    <HeroSection/>
-
+  <>
+   <HeroSection/>
    <Products/>
    <Pricing/>
 
-    </>
+  </>
+  
   )
 }
 
