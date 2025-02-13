@@ -46,9 +46,9 @@ const ProductDetail = () => {
 
   return (
     <section className="py-24 px-4 flex flex-col justify-center items-center">
-      <div className="flex flex-col items-center  md:w-[50%] ">
+      <div className="flex flex-col items-center  md:w-[60%] ">
     
-        <div className="mt-8 md:flex justify-between w-full min-h-[500px]  ">
+        <div className="mt-8 md:flex justify-between w-full max-h-[500px]  ">
           <div className=" h-full md:w-[50%]">
             <img
               src={product.productImg}
