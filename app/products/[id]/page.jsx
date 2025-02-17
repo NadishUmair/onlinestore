@@ -49,11 +49,11 @@ const ProductDetail = () => {
       <div className="flex flex-col items-center h-auto  md:w-[60%] ">
     
         <div className="mt-8 md:flex justify-between w-full  ">
-          <div className="h-full md:w-[50%] overflow-hidden">
+          <div className="h-full md:w-[50%] overflow-hidden ">
           <img
   src={product.productImg}
   alt={product.name}
-  className="min-h-[550px] object-cover transition-transform duration-300 ease-in-out transform hover:scale-110"
+  className="min-h-[550px] transition-transform duration-300 ease-in-out transform hover:scale-110"
   style={{ transformOrigin: 'center center' }} 
 />
 
