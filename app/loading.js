@@ -7,7 +7,7 @@ export default function Loading() {
   return (
     <div className="flex items-center justify-center h-screen ">
       <div className="text-2xl">
-      <BounceLoader color="#808080" size={100} /> 
+      <BounceLoader color="#264846" size={100} /> 
       </div>
     </div>
   );

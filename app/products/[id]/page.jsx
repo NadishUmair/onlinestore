@@ -43,28 +43,30 @@ const ProductDetail = () => {
   if (!product) {
     return <div>Product not found</div>;
   }
-
+  const whatsappMessage = `Hi, I am interested in purchasing ${product.name}. The price is Rs ${product.price || "N/A"}.`;
   return (
     <section className="py-24 px-4 flex flex-col justify-center items-center">
-      <div className="flex flex-col items-center  md:w-[60%] ">
+      <div className="flex flex-col items-center h-auto  md:w-[60%] ">
     
-        <div className="mt-8 md:flex justify-between w-full md:max-h-[500px]  ">
-          <div className=" h-full md:w-[50%]">
-            <img
-              src={product.productImg}
-              alt={product.name}
-              className="min-h-[550px] object-cover"
-            />
+        <div className="mt-8 md:flex justify-between w-full  ">
+          <div className="h-full md:w-[50%] overflow-hidden">
+          <img
+  src={product.productImg}
+  alt={product.name}
+  className="min-h-[550px] object-cover transition-transform duration-300 ease-in-out transform hover:scale-110"
+  style={{ transformOrigin: 'center center' }} 
+/>
+
           </div>
           <div className="flex flex-col justify-center  p-4 md:w-[50%]">
           <h1 className="text-4xl font-bold">{product.name}</h1>
-            <p className="text-md mb-4">{product.description}</p>
+            <p className="text-md mb-4 mt-4 text-sm">{product.description}</p>
             <div className="text-xl font-semibold">
               Rs {product.price || "Price: N/A"}
             </div>
             <div className="mt-4 w-full border">
             <a
-  href="https://wa.me/+923214644406"
+href={`https://wa.me/+923214644406?text=${encodeURIComponent(whatsappMessage)}`}
   target="_blank"
   rel="noopener noreferrer"
   className="text-white bg-green-600 px-4 py-2 w-full rounded-full text-center inline-block"

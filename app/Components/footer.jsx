@@ -109,8 +109,8 @@ const Footer = () => {
         </div>
 
         {/* Back to Top Button (floating) */}
-        <div className="fixed bottom-12 right-6 z-10">
-          <a href="#top" className="bg-gray-500 text-white p-4 rounded-full shadow-lg hover:bg-gray-600 transition">
+        <div className="fixed bottom-12 right-6 z-10  h-[3rem] w-[3rem] flex flex-col justify-center items-center">
+          <a href="#top" className="bg-[#264846] text-white  text-[1.3rem] flex flex-col justify-center items-center rounded-full shadow-lg  transition w-full h-full">
             ↑
           </a>
         </div>

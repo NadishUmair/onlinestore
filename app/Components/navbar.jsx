@@ -18,18 +18,21 @@ const Navbar = () => {
  
      <div className=' w-full flex justify-between  items-center h-auto   px-2 md:px-4'>
        
-       <div className='text-white  flex w-[60%]  md:w-[20%] '>
+       <div className='text-white  flex w-[60%]  md:w-[30%] '>
          <img src="/Assets/shopcircle.PNG" className=' w-[100px] md:w-[200px] h-[60px] md:h-[120px] object-cover' alt="Logo" />
        {/* <div className='bg-white border p-2'>
        <img src="/Assets/candaflag.png" className='w-[100px] md:w-[120px] h-[60px] object-cover' alt="canadaflag" />
        </div> */}
        </div>
-       <nav className='hidden md:block w-[70%] align-center'>
+       <nav className='hidden md:block md:w-[70%] align-center'>
          <ul className='flex justify-between items-center w-[60%] bg-[#264846] text-white/70 p-4 rounded-full '>
            <li className='cursor-pointer transition-all ease-in-out duration-300'>
              <Link href="/">Home</Link>
            </li>
         
+           <li className='cursor-pointer transition-all ease-in-out duration-300'>
+             <Link href="/products">WholeSale</Link>
+           </li>
            <li className='cursor-pointer transition-all ease-in-out duration-300'>
              <Link href="/products">Our Products</Link>
            </li>
@@ -57,8 +60,9 @@ const Navbar = () => {
              <Link href="/" onClick={() => setShowMenu(false)}>Home</Link>
            </li>
            <li className='cursor-pointer transition-all ease-in-out duration-300'>
-             <Link href="/#services" onClick={() => setShowMenu(false)}>Services</Link>
+             <Link href="/#services" onClick={() => setShowMenu(false)}>WholeSale</Link>
            </li>
+         
            
            <li className='cursor-pointer transition-all ease-in-out duration-300'>
              <Link href="/#ouryachts" onClick={() => setShowMenu(false)}>Our Products</Link>
@@ -71,6 +75,9 @@ const Navbar = () => {
            </li>
          
          </ul>
+       </div>
+       <div>
+       
        </div>
      </div>
    </section>

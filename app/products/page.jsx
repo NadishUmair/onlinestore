@@ -9,6 +9,7 @@ const Products = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [products, setProducts] = useState([]);
 
+  const [search,setSearch]=useState();
   const fetchProducts = async () => {
     try {
       const query = `*[_type == "product"]{
@@ -37,6 +38,21 @@ const Products = () => {
     fetchProducts();
   }, []);
 
+  const handleSearch = (e) => {
+    const query = e.target.value.toLowerCase();
+    if (query === "") {
+      fetchProducts(); 
+    } else {
+      const filteredProducts = products.filter((product) =>
+        product.name.toLowerCase().includes(query) 
+      );
+      setProducts(filteredProducts);
+    }
+  };
+  
+  
+
+
   return (
     <>
       {isLoading ? (
@@ -46,11 +62,12 @@ const Products = () => {
       ) : (
         <section className="py-24 px-4 " id="products">
           <div className="flex flex-col justify-center items-center ">
-            <span className="w-[210px] text-center text-[30px] rounded-md py-3 font-bold">
+            <span className="w-[210px] text-center text-[30px] text-[#264846] rounded-md py-3 font-bold">
               Our Products
             </span>
+            <div className="w-[60%]"><input type="text" onChange={handleSearch} placeholder="search" className="w-full p-2 border-2 rounded-full border-black" /></div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-4 ">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 ">
             {products?.map((product) => (
               <Link
                 href={`/products/${product?._id}`}

@@ -21,9 +21,7 @@ export const metadata = {
   description:
     "",
   keywords: "",
-  verification: {
-    google: "nJT7rzCm5FSnpLJtTdewiJcRrLEcPkrr73K1ZF5VHxo",
-  },
+
 };
 
 
@@ -34,7 +32,7 @@ export default function RootLayout({ children }) {
 
 
   const whatsappNumber = "+923214644406";
-  const message = "Hello! I need assistance.";
+  const message = "Hello! I want to buy product";
 
   return (
     <html lang="en" title={metadata.title} description={metadata.description}>
