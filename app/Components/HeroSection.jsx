@@ -27,7 +27,7 @@ const HeroSection = () => {
           src="/Assets/herosection/product.jpg" 
           // alt={`Slide ${index}`}
           alt="productsImg"
-          className={`  hero-img  inset-0 w-full h-full duration-1000 ease-in-out `}
+          className={` inset-0 w-full h-full duration-1000 ease-in-out `}
         />
       {/* ))} */}
     {/* <div className="absolute   inset-0 bg-gradient-to-r from-secondary-black to-transparent pointer-events-none"></div> */}
